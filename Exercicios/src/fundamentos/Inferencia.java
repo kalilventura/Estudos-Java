@@ -8,5 +8,6 @@ public class Inferencia {
 		 * */
 		var inferencia = 4.5;
 		
+		System.out.println();
 	}
 }
