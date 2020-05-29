@@ -9,5 +9,12 @@ public class ConversaoTipos {
 		byte d = (byte) c;
 		double e = 1.98656;
 		int f = (int) e;
+		
+		// Conversao para string
+		String g = Integer.toString(c);
+		
+		// Conversao de string para numero
+		String h = "123456";
+		int p = Integer.parseInt(h);
 	}
 }
