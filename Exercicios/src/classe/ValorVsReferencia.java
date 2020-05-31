@@ -4,16 +4,18 @@ public class ValorVsReferencia {
 
 	public static void main(String[] args) {
 		
+		// O valor passa por copia
 		double a = 2;
-		double b = a; // atribuição por valor (Tipo primitivo)
+		double b = a; // atribuicao por valor (Tipo primitivo)
 		
 		a++;
 		b--;
 		
 		System.out.println(a + " " + b);
 		
+		// O valor � uma referencia do objeto anterior
 		Data d1 = new Data(1, 6, 2022);
-		Data d2 = d1; // atribuição por referência (Objeto)
+		Data d2 = d1; // atribuicao por referencia (Objeto)
 		
 		d1.dia = 31;
 		d2.mes = 12;
