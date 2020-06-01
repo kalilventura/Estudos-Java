@@ -23,5 +23,7 @@ public class TesteCarro {
 		ferrari.desligarTurbo();
 		ferrari.acelerar();
 		System.out.println(ferrari.velocidadeAtual);
+		
+		System.out.println(ferrari.velocidadeDoAr());
 	}
 }
