@@ -6,9 +6,7 @@ public class Jogo {
 		monstro.x = 10;
 		monstro.y = 10;
 
-		Heroi heroi = new Heroi();
-		heroi.x = 10;
-		heroi.y = 10;
+		Heroi heroi = new Heroi(10, 10);
 
 		System.out.println(monstro.vida);
 		System.out.println(heroi.vida);
