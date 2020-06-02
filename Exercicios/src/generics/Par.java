@@ -58,5 +58,4 @@ public class Par<C, V> {
 			return false;
 		return true;
 	}
-	
 }
