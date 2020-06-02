@@ -14,5 +14,9 @@ public class CalculoTeste2 {
 		calc = (x, y) -> x * y;
 		System.out.println(calc.executar(3, 2));
 
+		// Podemos ter em uma interface funcional metodos default e estaticos
+		System.out.println(calc.legal());
+		System.out.println(Calculo.muitoLegal());
+		
 	}
 }
