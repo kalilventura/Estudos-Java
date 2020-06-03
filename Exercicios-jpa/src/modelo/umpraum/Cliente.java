@@ -1,6 +1,7 @@
 package modelo.umpraum;
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,7 @@ public class Cliente {
 
 	private String nome;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.PERSIST) // Quando for inserido o cliente o assento também será
 	@JoinColumn(name = "assento_id", unique = true)
 	private Assento assento;
 	
