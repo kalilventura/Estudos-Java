@@ -67,4 +67,8 @@ public class DAO<E> {
 		query.setFirstResult(offset);
 		return query.getResultList();
 	}
+	
+	public E getById(Object id) {
+		return entityManager.find(klass, id);
+	}
 }
