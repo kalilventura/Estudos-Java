@@ -60,7 +60,7 @@ public class DAO<E extends Entidade> {
 			throw new UnsupportedOperationException("Classe nula.");
 		}
 
-		String jpql = "select e from " + klass.getName() + "e";
+		String jpql = "select e from " + klass.getName() + " e";
 
 		TypedQuery<E> query = entityManager.createQuery(jpql, klass);
 		query.setMaxResults(limit);
