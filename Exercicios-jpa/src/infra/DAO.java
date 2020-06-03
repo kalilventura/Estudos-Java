@@ -42,7 +42,7 @@ public class DAO<E extends Entidade> {
 		return this;
 	}
 
-	public void close() {
+	public void closeDAO() {
 		entityManager.close();
 	}
 
