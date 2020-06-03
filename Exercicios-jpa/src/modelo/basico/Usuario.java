@@ -6,13 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Usuario {
-	
+public class Usuario implements Entidade {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Significa que cada tabela tera sua propria sequencia de id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Significa que cada tabela tera sua propria sequencia de id
 	private Long id;
-	
-	private String nome;	
+
+	private String nome;
 	private String email;
 
 	public Usuario() {
