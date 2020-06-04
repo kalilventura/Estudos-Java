@@ -9,9 +9,13 @@ open module app.calculo {
 	//Obs: Somente o financeiro vai conseguir acessar, caso outro modulo tente ele nao vai conseguir
 	//Caso mais de um modulo precise acessar é só dividir por virgula
 	//Ex: to app.financeiro, app.logging
-	exports br.com.coder.app.calculo.interno
-	to app.financeiro;
+	exports br.com.coder.app.calculo.interno to app.financeiro;
 	
 	// Outra maneira de abrir para utilizacao de reflection
-	//opens br.com.coder.app.calculo.interno to app.financeiro, app.logging;
+	// opens br.com.coder.app.calculo.interno to app.financeiro, app.logging;
+
+	requires app.api;
+	
+	// Nossa classe CalculadoraImpl é uma implementação da interface Calculadora
+	provides br.com.coder.app.Calculadora with br.com.coder.app.calculo.CalculadoraImpl;
 }
