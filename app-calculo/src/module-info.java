@@ -1,4 +1,5 @@
-module app.calculo {
+// Utilizando o open ele habilita o uso de reflection
+open module app.calculo {
 	exports br.com.coder.app.calculo;
 	// O transitive passa para os que chamarem esse modulo acessarem o logger caso algum 
 	// metodo de a referencia externalizada para ele
@@ -10,4 +11,7 @@ module app.calculo {
 	//Ex: to app.financeiro, app.logging
 	exports br.com.coder.app.calculo.interno
 	to app.financeiro;
+	
+	// Outra maneira de abrir para utilizacao de reflection
+	//opens br.com.coder.app.calculo.interno to app.financeiro, app.logging;
 }
