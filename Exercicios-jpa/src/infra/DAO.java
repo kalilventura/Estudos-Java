@@ -67,8 +67,18 @@ public class DAO<E> {
 		query.setFirstResult(offset);
 		return query.getResultList();
 	}
-	
+
 	public E getById(Object id) {
 		return entityManager.find(klass, id);
+	}
+
+	public List<E> executeQuery(String consulta, Object... params) {
+		TypedQuery<E> query = entityManager.createNamedQuery(consulta, klass);
+
+		for (int i = 0; i < params.length; i += 2) {
+			query.setParameter(params[i].toString(), params[i + 1]);
+		}
+
+		return query.getResultList();
 	}
 }
