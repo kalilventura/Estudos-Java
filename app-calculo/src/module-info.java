@@ -3,4 +3,11 @@ module app.calculo {
 	// O transitive passa para os que chamarem esse modulo acessarem o logger caso algum 
 	// metodo de a referencia externalizada para ele
 	requires transitive app.logging;
+	
+	// Exports ... To ... habilita que o modulo financeiro consiga enxergar o interno
+	//Obs: Somente o financeiro vai conseguir acessar, caso outro modulo tente ele nao vai conseguir
+	//Caso mais de um modulo precise acessar é só dividir por virgula
+	//Ex: to app.financeiro, app.logging
+	exports br.com.coder.app.calculo.interno
+	to app.financeiro;
 }
