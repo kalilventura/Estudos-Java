@@ -81,4 +81,10 @@ public class DAO<E> {
 
 		return query.getResultList();
 	}
+
+	public E findOne(String consulta, Object... params) {
+		var result = this.executeQuery(consulta, params);
+
+		return result.isEmpty() ? null : result.get(0);
+	}
 }
