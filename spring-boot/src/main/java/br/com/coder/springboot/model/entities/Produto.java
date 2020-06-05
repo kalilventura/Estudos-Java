@@ -11,6 +11,31 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
+	private int desconto;
+	private double preco;
+
+	public int getDesconto() {
+		return desconto;
+	}
+
+	public Produto(String nome, int desconto, double preco) {
+		super();
+		this.nome = nome;
+		this.desconto = desconto;
+		this.preco = preco;
+	}
+
+	public void setDesconto(int desconto) {
+		this.desconto = desconto;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
 
 	public Produto() {
 		super();
