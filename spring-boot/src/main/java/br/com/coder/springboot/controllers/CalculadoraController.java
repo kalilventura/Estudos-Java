@@ -7,19 +7,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(name = "/calculadora")
+@RequestMapping("/calculadora")
 public class CalculadoraController {
 
-	// /calculadora/somar/10/20
-	@GetMapping(name = "/somar/{a}/{b}") 
+	@GetMapping("/somar/{a}/{b}")
 	public int somar(@PathVariable int a, @PathVariable int b) {
-		return a + b; 
+		return a + b;
 	}
 
-	// /calculadora/subtrair?a=10b=20
-	@GetMapping(name = "/subtrair")
-	public int subtrair(@RequestParam(value = "a") int a, @RequestParam(value = "b") int b) {
+	// /calculadora/subtrair?a=100&b=39
+	@GetMapping("/subtrair")
+	public int subtrair(@RequestParam(name = "a") int a,
+			@RequestParam(name = "b") int b) {
 		return a - b;
 	}
-
 }
