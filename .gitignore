@@ -111,4 +111,14 @@ target/
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/java,eclipse,java-web,visualstudiocode
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# End of https://www.gitignore.io/api/java,eclipse,java-web,visualstudiocode,netbeans
