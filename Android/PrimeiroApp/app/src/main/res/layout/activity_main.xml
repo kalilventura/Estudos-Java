@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/default_margin"
+    android:paddingEnd="@dimen/default_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:hint="Digit your first name"
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_first_name" />
+
+    <EditText
+        android:hint="Digit your last name"
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        android:layout_marginTop="@dimen/dimension_default_in_components"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText" />
+
+    <Button
+        android:id="@+id/btn_show_name"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif"
+        android:text="Click me"
+        app:layout_constraintTop_toBottomOf="@id/editText2"
+        android:layout_marginTop="@dimen/dimension_default_in_components"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_last_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:fontFamily="sans-serif"
+        android:text="Digit your first name and last name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimension_default_in_components" />
+
+    <TextView
+        android:id="@+id/tv_first_name"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:text="Digit your fist name:"
+        app:layout_constraintTop_toBottomOf="@id/tv_last_first_name"
+        android:layout_marginTop="@dimen/dimension_default_in_components"
+        />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:text="Digit your last name:"
+        app:layout_constraintBottom_toTopOf="@id/editText2"
+        />
+
+    <TextView
+        android:id="@+id/tv_validate_first_name"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invalid first Name"
+        app:layout_constraintTop_toBottomOf="@id/btn_show_name"
+        />
+
+    <TextView
+        android:id="@+id/tv_validate_last_name"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invalid last Name"
+        app:layout_constraintTop_toBottomOf="@id/tv_validate_first_name"
+        />
+
+</android.support.constraint.ConstraintLayout>
